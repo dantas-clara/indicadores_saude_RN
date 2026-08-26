@@ -14,6 +14,9 @@ def get_info(df):
 def get_isna(df):
     return df.isna()
 
+def get_missing_percentage(df):
+    return (df.isnull().sum() / len (df) * 100).round(2)
+
 def get_duplicated(df):
     return df.duplicated()
 
