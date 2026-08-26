@@ -12,7 +12,7 @@ from src import (get_999,
 
 df_raw = data_loader_function()
 
-"""
+
 print("\n |     ISIN     |\n")
 df_show_999 = get_999(df_raw)
 print(df_show_999)
@@ -52,7 +52,6 @@ print("\n |     DUPLICATE     |\n")
 df_show_duplicated = get_duplicated(df_raw).sum()
 print(df_show_duplicated)
 
-"""
 #6 todo NUNIQUE
 print("\n |     NUNIQUE     |\n")
 df_show_nunique = get_nunique(df_raw)
