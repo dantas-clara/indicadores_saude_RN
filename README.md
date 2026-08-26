@@ -1,5 +1,5 @@
 # indicadores_saude_RN
-1. #PERGUNTANORTEADORA:  “Quais são as principais características sociodemográficas e como se distribuem as demandas e ofertas de cuidados no Rio Grande do Norte (RN), no Nordeste (NE) e no Brasil (BR)?” 
+1. #PERGUNTA NORTEADORA:  “Quais são as principais características sociodemográficas e como se distribuem as demandas e ofertas de cuidados no Rio Grande do Norte (RN), no Nordeste (NE) e no Brasil (BR)?” 
 
 2. #OBJETIVO GERAL: Caracterizar o perfil sociodemográfico e analisar a distribuição das demandas
 e da provisão de cuidados no Rio Grande do Norte, Nordeste e Brasil, com foco na demanda associada às Doenças Crônicas Não Transmissíveis (DCNT).
