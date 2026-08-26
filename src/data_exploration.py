@@ -1,3 +1,5 @@
+def get_999(df):
+    return df.isin(["999", 999]).sum()
 
 def get_head (df):
     return df.head()
@@ -22,3 +24,4 @@ def get_duplicated(df):
 
 def get_nunique(df):
     return df.nunique()
+

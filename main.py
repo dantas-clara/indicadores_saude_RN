@@ -1,14 +1,20 @@
 from src import data_loader_function
-from src import (get_head,
+from src import (get_999,
+                 get_head,
                  get_tail,
                  get_shape,
                  get_info,
                  get_isna,
                  get_missing_percentage,
                  get_duplicated,
-                 get_nunique)
+                 get_nunique )
 
 df_raw = data_loader_function()
+
+
+print("\n |     ISIN     |\n")
+df_show_999 = get_999(df_raw)
+print(df_show_999)
 
 #1 todo HEAD()
 print("\n |     HEAD     |\n")
