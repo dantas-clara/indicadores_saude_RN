@@ -4,10 +4,12 @@ from src import show_head, show_tail, show_shape, show_info, show_isna, show_dup
 df_raw = data_loader_function()
 
 #1 todo HEAD()
+print("\n |     HEAD     |\n")
 df_show_head = show_head(df_raw)
 print(df_show_head)
 
 #2 todo TAIL()
+print("\n |     TAIL     |\n")
 df_show_tail = show_tail(df_raw)
 print(df_show_tail)
 
