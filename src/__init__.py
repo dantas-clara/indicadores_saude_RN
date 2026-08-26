@@ -8,3 +8,4 @@ from .data_exploration import get_isna
 from .data_exploration import get_missing_percentage
 from .data_exploration import get_duplicated
 from .data_exploration import get_nunique
+from .data_exploration import get_unique

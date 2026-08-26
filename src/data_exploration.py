@@ -25,3 +25,5 @@ def get_duplicated(df):
 def get_nunique(df):
     return df.nunique()
 
+def get_unique(coluna):
+    return coluna.unique()
