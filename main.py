@@ -20,7 +20,7 @@ df_processed.to_csv(
 )
 
 df_processed.to_sql(
-    name="indicadores",
+    name="fact_health_metrics",
     con=engine,
     index=False,
 )
