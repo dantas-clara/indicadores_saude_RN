@@ -1,9 +1,15 @@
 from src import data_loader, run_exploration, run_scrubbing
 
 
+
 df_raw = data_loader()
 df_exploration = run_exploration(df_raw)
 df_scrubbing = run_scrubbing(df_raw)
+
+
+engine = create_engine(
+    "mysql+pymysql://root:nova_senha@localhost:3306/db_processed"
+)
 
 
 df_processed = df_scrubbing
@@ -13,4 +19,11 @@ df_processed.to_csv(
     encoding="utf-8-sig"
 )
 
+df_processed.to_sql(
+    name="indicadores",
+    con=engine,
+    index=False,
+)
 
+
+print("\n |          Banco importado com sucesso!       |\n")

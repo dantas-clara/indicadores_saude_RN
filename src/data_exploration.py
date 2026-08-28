@@ -30,6 +30,7 @@ def get_unique(coluna):
 
 
 def run_exploration(df):
+
     print("\n |     ISIN     |\n")
     df_show_999 = get_999(df)
     print(df_show_999)
@@ -56,7 +57,7 @@ def run_exploration(df):
 
     # 4.1 todo ISNA
     print("\n |     ISNA     |\n")
-    df_show_isna = get_isna(df).sum()
+    df_show_isna = get_isna(df["Dimensão_PNaC"]).unique()
     print(df_show_isna)
 
     # 4.2 todo ISNULL PERCENTAGE

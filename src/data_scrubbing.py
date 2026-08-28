@@ -18,17 +18,21 @@ def rename_columns(df):
 
 def replace_sings(df):
     return df.replace({
-        "," : ".",
-        "%" : ""
+        "quantitativo" : {
+            ",": ".",
+            "%": ""
+        }
     }, regex=True)
 
 
 
 def fill_name(df):
     return df.fillna({
-        "ano" : "2024",
-        "sexo" : "total_populacao"
-
+        "ano": "2022",
+        "sexo" : "total_populacao",
+        "dimensao_pnac": "Contexto",
+        "localidade": "Brasil",
+        "valor": "Percentual"
     })
 
 
@@ -43,11 +47,11 @@ def sort_data(df):
 
 
 
-
 def run_scrubbing(df):
     print("\n|    RENAME       |\n")
     df_show_rename = rename_columns(df)
     print(df_show_rename.info())
+
 
     print("\n|    REPLACE       |\n")
     df_show_replace = replace_sings(df_show_rename)
@@ -56,12 +60,22 @@ def run_scrubbing(df):
     print(df_show_replace.astype(str).apply(lambda col: col.str.contains(",").any()))
     print(df_show_replace.astype(str).apply(lambda col: col.str.contains("%").any()))
 
+
+    print("\n|   TODAS AS COLUNAS ANTES DO MÉTODO FILLNA     |\n")
+    print(df_show_replace.isna().sum())
+
+
     print("\n|     FILLNA     |\n")
     df_show_fillna = fill_name(df_show_replace)
     print("\n|     FILLNA COLUNA: SEXO    |\n")
     print(df_show_fillna["sexo"].unique())
-    print("\n|     FILLNA COLUNA: ANO    |\n")
-    print(df_show_fillna["ano"].unique())
+    print("\n|    CONFIRMAÇÃO DA EXECUÇÃO DO FILLNA     |\n")
+    print(df_show_fillna[["dimensao_pnac", "ano", "localidade", "valor"]].isna().any())
+
+    print("\n|   TODAS AS COLUNAS APÓS O MÉTODO FILLNA     |\n")
+    print(df_show_fillna.isna().sum())
+
+
 
     print("\n|    ASTYPE      |\n")
     df_show_astype = astype_data(df_show_fillna)
