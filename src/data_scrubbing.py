@@ -71,6 +71,7 @@ def run_scrubbing(df):
     df_show_sort = sort_data(df_show_astype)
     print(df_show_sort["ano"].unique())
 
+    return df_show_sort
 
 
 
