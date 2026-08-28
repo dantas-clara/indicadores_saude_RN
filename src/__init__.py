@@ -1,4 +1,5 @@
-from .data_loader import data_loader_function
+from .data_loader import data_loader
+#######################################################
 from .data_exploration import get_999
 from .data_exploration import get_head
 from .data_exploration import get_tail
