@@ -10,3 +10,10 @@ from .data_exploration import get_duplicated
 from .data_exploration import get_nunique
 from .data_exploration import get_unique
 from .data_exploration import run_exploration
+#######################################################
+from .data_scrubbing import rename_columns
+from .data_scrubbing import replace_sings
+from .data_scrubbing import astype_data
+from .data_scrubbing import fill_name
+from .data_scrubbing import sort_data
+from .data_scrubbing import run_scrubbing
