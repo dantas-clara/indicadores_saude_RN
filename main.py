@@ -6,11 +6,7 @@ df_raw = data_loader()
 df_exploration = run_exploration(df_raw)
 df_scrubbing = run_scrubbing(df_raw)
 
-"""
-engine = create_engine(
-    "mysql+pymysql://root:nova_senha@localhost:3306/db_processed"
-)
-"""
+
 
 df_processed = df_scrubbing
 df_processed.to_csv(
