@@ -7,6 +7,7 @@ df_exploration = run_exploration(df_raw)
 df_scrubbing = run_scrubbing(df_raw)
 
 
+engine = create_engine
 
 df_processed = df_scrubbing
 df_processed.to_csv(
@@ -14,6 +15,7 @@ df_processed.to_csv(
     index=False,
     encoding="utf-8-sig"
 )
+
 
 df_processed.to_sql(
     name="fact_health_metrics",

@@ -10,7 +10,6 @@ def rename_columns(df):
         "Faixa Etaria" : "faixa_etaria",
         "Tipo de Arranjo Familiar" : "tipo_arranjo_familiar",
         "Renda" : "renda",
-        "PCD" : "pcd",
         "Valor" : "valor",
         "Quantitativo" : "quantitativo"
     })
