@@ -1,18 +1,16 @@
 from src import data_loader, run_exploration, run_scrubbing
 from analysis import tx_envelhecimento_sexo,  tx_envelhecimento_raca
+from sqlalchemy import create_engine
 
 df_raw = data_loader()
-#df_exploration = run_exploration(df_raw)
+df_exploration = run_exploration(df_raw)
 df_scrubbing = run_scrubbing(df_raw)
 df_envelhecimento_sexo = tx_envelhecimento_sexo(df_scrubbing)
 df_envelhecimento_raca = tx_envelhecimento_raca(df_scrubbing)
 
-"""
-df_scrubbing = run_scrubbing(df_raw)
 
 
-engine = create_engine(  "mysql+pymysql://root:nova_senha@localhost:3306/db_processed"
-)
+engine = create_engine( ... )
 
 df_processed = df_scrubbing
 df_processed.to_csv(
@@ -30,4 +28,3 @@ df_processed.to_sql(
 
 
 print("\n |          Banco importado com sucesso!       |\n")
-"""
