@@ -10,7 +10,7 @@ df_envelhecimento_raca = tx_envelhecimento_raca(df_scrubbing)
 
 
 
-engine = create_engine( ... )
+engine = create_engine( ...)
 
 df_processed = df_scrubbing
 df_processed.to_csv(
