@@ -1,1 +1,1 @@
-from .context import tx_envelhecimento_sexo,  tx_envelhecimento_raca
+from .context import tx_envelhecimento_sexo,  tx_envelhecimento_raca, tx_renda
