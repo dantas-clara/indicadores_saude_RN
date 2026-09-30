@@ -4,9 +4,9 @@ from matplotlib.lines import Line2D
 
 
 
-# todo Taxa de Envelhecimento Humano POR SEXO
+# todo Índice de Envelhecimento Humano POR SEXO
 
-def tx_envelhecimento_sexo(df):
+def indx_envelhecimento_sexo(df):
 
     df_envelhecimento = df[
         df["id_indicador"] == "dem_01"
@@ -97,9 +97,9 @@ def tx_envelhecimento_sexo(df):
 
 
 
-# todo Taxa de Envelhecimento Humano POR RAÇA
+# todo Índice de Envelhecimento Humano POR RAÇA
 
-def tx_envelhecimento_raca(df):
+def indx_envelhecimento_raca(df):
 
     df_envelhecimento = df[
         (df["id_indicador"] == "dem_01") &
