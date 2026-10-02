@@ -13,4 +13,5 @@ pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 six==1.17.0
 SQLAlchemy==2.0.52
+Streamlit==1.64.0
 typing_extensions==4.16.0
